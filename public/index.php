@@ -1,0 +1,2 @@
+<?php
+//IRA FAZER OS INCLUDES

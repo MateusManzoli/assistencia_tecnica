@@ -1,0 +1,18 @@
+{% block body %}
+    <h3>Cadastro Nota Fiscal</h3>
+    {{mensagem}}
+    <form method="post" action="cadastro_nfe.php">
+        <label>Numero da Nota:</label>
+        <input type="text" name="nota"><br><br>
+        <label>SR:</label>
+        <input type="text" name="sr"><br><br>
+        <label>Data de Emissao :</label>
+        <input type="text" name="emissao" value="{{data}}"><br><br>
+        <label>Pedido :</label>
+        <input type="text" name="pedido"><br><br>
+        <label>Fornecedor :</label>
+        <input type="text" name="fornecedor">
+        <input type="submit" value="cadastrar">
+        <a href="../public/nota_fiscal/listar_nfe.php">Voltar</a>
+    </form>
+{% endblock%}

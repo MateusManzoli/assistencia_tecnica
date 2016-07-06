@@ -1,0 +1,28 @@
+
+{% block body %}
+    <h3>Buscar Produto</h3>
+    <form name="frmBusca" method="post" action="{{server}}" >
+        <input type="text" name="imei" placeholder="Serial">
+        <input type="submit" value="Buscar">
+    </form>
+    {% if produto %}
+        <table>
+            <thead>
+            <th>ID</th>
+            <th>Descricao</th>
+            <th>Imei</th>
+            <th>Lote</th>
+            <th>Nota Fiscal</th>
+        </thead>
+        <tr>
+            <td>{{produto.id}}</td>
+            <td>{{produto.descricao}}</td>
+            <td>{{produto.imei}}</td>
+            <td>{{produto.lote}}</td>
+            <td>{{produto.nota_fiscal_id}}</td>
+        </tr>
+    </table>
+{% else %}
+    <h5>Serial inexistente no nosso sistema !</h5>
+{% endif %}
+{% endblock %}

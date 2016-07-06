@@ -1,0 +1,40 @@
+{% block body %}
+<div class="geral">
+    <form class="form-horizontal-a" method="post" action="editar_produto.php?id={{produto.id}}"> 
+            <input type="hidden" name="editar" value="1"/>
+            <input type="hidden" name="id" value="{{produto.id}}"/>
+            {{mensagem}}
+            <h2>Dados do produto</h2>
+            <div class="descricao">
+                <label>Descricao:</label>
+                <div>
+                    <input name="descricao" type="text" value="{{produto.descricao}} ">
+                </div>
+            </div>
+            <div class="imei">
+                <label for="imei">Imei</label>
+                <div>
+                    <input name="imei" type="text" value="{{produto.imei}}">
+                </div>
+            </div>            
+            <div class="lote">
+                <label for="lote">Lote</label>
+                <div>
+                    <input name="lote" type="text" value="{{produto.lote}}">
+                </div>
+            </div>
+            <div class="nfe">
+                <label for="Nota Fiscal">Nota Fiscal</label>
+                <div>
+                    <input name="nfe" type="text"value="{{produto.nota_fiscal_id}}">
+                </div>
+            </div>
+            <div>
+                <button Type="submit">Atualizar</button>
+            </div><br>
+            <div>
+                <a href="listar_produtos.php"><button type="button">Voltar</button></a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

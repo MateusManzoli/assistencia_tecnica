@@ -1,0 +1,20 @@
+{% block body %}
+    <h1>Cadastro de produtos</h1><Br>
+    {{mensagem}}
+    <form method="post" action="cadastro_produto.php">
+        <label>Descricao:</label>
+        <input type="text" name="descricao"><br><br>
+        <label>Imei:</label>
+        <input type="text" name="imei"><br><br>
+        <label>Lote:</label>
+        <input type="text" name="lote"><br><br>
+        <label>Nota Fiscal :</label>
+        <select name="nfe" id="nfe">
+            {% for nf in nfe  %}
+                <option value="{{nf.id}}">{{nf.nota}}</option>
+            {% endfor %}
+        </select><br><br>
+        <input type="submit" value="cadastrar">
+        <a href="../public/listar_produtos.php">Voltar</a>
+    </form>
+{% endblock%}

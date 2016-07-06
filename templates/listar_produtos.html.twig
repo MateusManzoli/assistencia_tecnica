@@ -1,0 +1,30 @@
+{% block body %}
+    <div class="geral">
+        <form method="post" action="listar_produtos.php" style="border: 1px solid black;">
+            <input type="hidden" name="deletar" value="1"/>
+            {{mensagem}}
+            <table>
+                <thead>
+                <th>ID</th>
+                <th>Descricao</th>
+                <th>Imei</th>
+                <th>Lote</th>
+                <th>Nota Fiscal</th>
+                <th colspan="2">Gerenciar</th>
+                </thead>
+                {% for prod in produto %}
+                    <input type="hidden" name="produto_id" value="{{prod.id}}">
+                    <tr>
+                        <td>{{prod.id}}</td>
+                        <td>{{prod.descricao}}</td>
+                        <td>{{prod.imei}}</td>
+                        <td>{{prod.lote}}</td>
+                        <td>{{prod.nota_fiscal_id}}</td>
+                        <td><a href="editar_produto.php?id={{prod.id}}">Editar</a></td>
+                        <td><input type="submit" value="Excluir"</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </form>
+    </div>
+{% endblock %}
