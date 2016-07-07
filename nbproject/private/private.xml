@@ -3,9 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/mateus/assistencia_tecnica/funcoes/nota_fiscal.php</file>
-            <file>file:/home/mateus/assistencia_tecnica/funcoes/produto.php</file>
-            <file>file:/home/mateus/assistencia_tecnica/funcoes/exportar_arquivo.php</file>
+            <file>file:/home/mateus/assistencia_tecnica/templates/cadastro_nfe.html.twig</file>
+            <file>file:/home/mateus/assistencia_tecnica/public/buscar_produto_serial.php</file>
+            <file>file:/home/mateus/assistencia_tecnica/public/listar_produtos.php</file>
         </group>
     </open-files>
 </project-private>
