@@ -45,6 +45,9 @@ function excluirProduto($id) {
 }
 
 function editarProduto($dados) {
+    if (verificar($dados['imei'])) {
+        throw new Exception("O serial informado ja esta sendo utilizado em nosso sistema, Verifique e tente novamente!");
+    }
     $editar = "UPDATE assistencia_tecnica.produto SET 
             descricao = '" . addslashes($dados['descricao']) . "',
             imei = '" . addslashes($dados['imei']) . "',

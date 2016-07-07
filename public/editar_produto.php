@@ -4,6 +4,8 @@ error_reporting(E_ALL);
 
 include_once '../PDO/conexao.php';
 include_once '../funcoes/func_produto.php';
+include_once '../funcoes/func_nota_fiscal.php';
+
 try {
     $retorno = "";
     if ($_POST) {
@@ -18,5 +20,5 @@ $produto = buscarProduto($_GET['id']);
 
 renderTemplate('editar_produto', array(
     "mensagem" => $retorno,
-    "produto" => $produto
+    "produto" => $produto,
 ));
