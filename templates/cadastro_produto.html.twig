@@ -1,5 +1,6 @@
 {% block body %}
-    <h1>Cadastro de produtos</h1><Br>
+    <a href="../index.php">Home</a>
+    <h3>Cadastro de produtos</h3><Br>
     {{mensagem}}
     <form method="post" action="cadastro_produto.php">
         <label>Descricao:</label>
@@ -15,6 +16,6 @@
             {% endfor %}
         </select><br><br>
         <input type="submit" value="cadastrar">
-        <a href="../public/listar_produtos.php">Voltar</a>
+        <a href="../produto/listar_produtos.php">Voltar</a>
     </form>
 {% endblock%}

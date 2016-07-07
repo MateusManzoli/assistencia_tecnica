@@ -1,2 +1,4 @@
 <?php
-//IRA FAZER OS INCLUDES
+include_once '../PDO/conexao.php';
+
+renderTemplate('index',array());

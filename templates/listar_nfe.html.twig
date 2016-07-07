@@ -1,0 +1,34 @@
+{% block body %}
+    <div class="geral">
+        <a href="../index.php">Home</a>
+        <form method="post" action="listar_nfe.php" style="border: 1px solid black;">
+            <input type="hidden" name="deletar" value="1"/>
+            {{mensagem}}
+            <table>
+                <thead>
+                <th>ID</th>
+                <th>Nota</th>
+                <th>SR</th>
+                <th>data de emissao</th>
+                <th>pedido</th>
+                <th>fornecedor</th>
+                <th colspan="2">Gerenciar</th>
+                </thead>
+                {% for ntf in nota %}
+                    <input type="hidden" name="nota_id" value="{{ntf.id}}">
+                    <tr>
+                        <td>{{ntf.id}}</td>
+                        <td>{{ntf.nota}}</td>
+                        <td>{{ntf.SR}}</td>
+                        <td>{{ntf.data_emissao}}</td>
+                        <td>{{ntf.pedido}}</td>
+                        <td>{{ntf.fornecedor}}</td>
+                        <td><a href="editar_nfe.php?id={{ntf.id}}">Editar</a></td>
+                        <td><input type="submit" value="Excluir"</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </form>
+        <a href="../nota_fiscal/cadastro_nfe.php">Cadastrar uma nova Nota Fiscal</a>
+    </div>
+{% endblock %}

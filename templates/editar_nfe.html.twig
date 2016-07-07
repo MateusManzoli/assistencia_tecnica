@@ -1,0 +1,46 @@
+{% block body %}
+    <div class="geral">
+        <form class="form-horizontal-a" method="post" action="editar_nfe.php?id={{nota.id}}"> 
+            <input type="hidden" name="editar" value="1"/>
+            <input type="hidden" name="id" value="{{nota.id}}"/>
+            {{mensagem}}
+            <h2>Dados do produto</h2>
+            <div class="descricao">
+                <label>Nota:</label>
+                <div>
+                    <input name="nota" type="text" value="{{nota.nota}} ">
+                </div>
+            </div>
+            <div class="imei">
+                <label for="sr">SR</label>
+                <div>
+                    <input name="sr" type="text" value="{{nota.SR}}">
+                </div>
+            </div>            
+            <div class="lote">
+                <label for="emissao">data de emissao</label>
+                <div>
+                    <input name="emissao" type="text" value="{{nota.data_emissao}}">
+                </div>
+            </div>
+            <div class="nfe">
+                <label for="pedido">Pedido</label>
+                <div>
+                    <input name="pedido" type="text"value="{{nota.pedido}}">
+                </div>
+            </div>
+            <div class="nfe">
+                <label for="fornecedor">Fornecedor</label>
+                <div>
+                    <input name="fornecedor" type="text"value="{{nota.fornecedor}}">
+                </div>
+            </div>
+            <div>
+                <button Type="submit">Atualizar</button>
+            </div><br>
+            <div>
+                <a href="listar_nfe.php"><button type="button">Voltar</button></a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

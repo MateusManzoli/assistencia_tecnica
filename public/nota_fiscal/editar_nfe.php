@@ -1,22 +1,23 @@
 <?php
+
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-include_once '../PDO/conexao.php';
-include_once '../funcoes/func_produto.php';
+include_once '../../PDO/conexao.php';
+include_once '../../funcoes/func_nota_fiscal.php';
 try {
     $retorno = "";
     if ($_POST) {
-        editarProduto($_POST);
-        $retorno = "Produto editado com sucesso";
+        editarNotaFiscal($_POST);
+        $retorno = "Nota fiscal editada com sucesso";
     }
 } catch (Exception $e) {
     $retorno = $e->getMessage();
 }
 
-$produto = buscarProduto($_GET['id']);
+$nota = buscarNotaFiscal($_GET['id']);
 
-renderTemplate('editar_produto', array(
+renderTemplate('editar_nfe', array(
     "mensagem" => $retorno,
-    "produto" => $produto
+    "nota" => $nota
 ));

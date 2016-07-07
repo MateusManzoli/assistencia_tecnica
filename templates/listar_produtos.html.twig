@@ -1,5 +1,6 @@
 {% block body %}
     <div class="geral">
+    <a href="../index.php">Home</a>
         <form method="post" action="listar_produtos.php" style="border: 1px solid black;">
             <input type="hidden" name="deletar" value="1"/>
             {{mensagem}}
@@ -26,5 +27,6 @@
                 {% endfor %}
             </table>
         </form>
+        <a href="../produto/cadastro_produto.php">Cadastrar um novo Produto</a>
     </div>
 {% endblock %}

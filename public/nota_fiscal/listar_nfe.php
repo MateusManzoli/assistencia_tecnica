@@ -1,23 +1,26 @@
 <?php
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
-include_once '../PDO/conexao.php';
-include_once '../funcoes/func_produto.php';
+
+include_once '../../PDO/conexao.php';
+include_once '../../funcoes/func_nota_fiscal.php';
 
 try {
     $retorno = "";
 
 if (!empty($_POST['deletar'])) {
-        excluirProduto($_POST['produto_id']);
-        $retorno = "Produto deletado com sucesso";
+    excluirNotaFiscal($_POST['nota_id']);
+        $retorno = "Nota fiscal deletada com sucesso";
     }
 } catch (Exception $e) {
     $retorno = $e->getMessage();
 }
 
-$produto = buscarProdutos();
+$data = date("d-m-Y");
+$nota = buscarNotasFiscais();
 
-renderTemplate('listar_produtos', array(
+renderTemplate('listar_nfe', array(
     "mensagem" => $retorno,
-    "produto" => $produto
+    "nota" => $nota,
+    "data" => $data
 ));

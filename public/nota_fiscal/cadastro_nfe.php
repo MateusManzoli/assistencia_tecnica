@@ -7,7 +7,7 @@ include_once '../../PDO/conexao.php';
 
 include_once '../../funcoes/func_produto.php';
 include_once '../../funcoes/func_nota_fiscal.php';
-$data = date('Y-m-d');
+
 try {
     $retorno = "";
 
@@ -21,5 +21,4 @@ try {
 
 renderTemplate('cadastro_nfe', array(
     "mensagem" => $retorno,
-    "data" => $data
 ));

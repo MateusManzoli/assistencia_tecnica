@@ -99,6 +99,10 @@ class ComposerStaticInitc7b4f811b5c23ec86b22804b1a85f6c4
             array (
                 0 => __DIR__ . '/..' . '/sybio/image-workshop/src',
             ),
+            'PHPExcel' => 
+            array (
+                0 => __DIR__ . '/..' . '/phpoffice/phpexcel/Classes',
+            ),
         ),
         'D' => 
         array (
